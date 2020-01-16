@@ -1,6 +1,6 @@
 class Student
 
-  attr_accessor :name, :grade, :id=nil 
+  attr_accessor :name, :grade, :id 
   
   def initialize(name, grade, id=nil)
     @name = name
@@ -25,6 +25,12 @@ class Student
   
   def self.drop_table
     
-  end   
+  end 
+  
+  def save 
+    sql = <<-SQL
+      INSERT INTO students (name, grade)
+      
+  end 
   
 end
